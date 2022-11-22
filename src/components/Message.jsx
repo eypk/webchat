@@ -15,7 +15,8 @@ const Message = ({ message }) => {
   return (
     <div
       ref={ref}
-      className={`message ${message.senderId === currentUser.uid && "owner"}`}
+      // className={`message ${message.senderId === currentUser.uid && "owner"}`}
+      className={"message owner"}
     >
       <div className="messageInfo">
         <img
@@ -27,8 +28,24 @@ const Message = ({ message }) => {
           alt=""
         />
         {/* <span>Just Now</span> */}
-        <div>{message.text}</div>
+      </div>
+      <div className="messageContent">
+        <p>{message.text}</p>
         {message.image && <img src={message.image} alt="" width={24} />}
+        {message.image && (
+          <a href={message.image} target="_blank" rel="noreferrer">
+            Preview
+          </a>
+        )}
+        {/* {message.image && (
+          <video
+            width="320"
+            height="240"
+            src={message.image}
+            type="video/mp4"
+            controls
+          ></video>
+        )} */}
       </div>
     </div>
   );
