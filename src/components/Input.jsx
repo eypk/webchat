@@ -79,7 +79,7 @@ const Input = () => {
         value={text}
       />
       <div className="send">
-        <img src={AttachIcon} alt="" />
+        {/* <img src={AttachIcon} alt="" /> */}
 
         <input
           style={{ display: "none" }}
@@ -88,7 +88,7 @@ const Input = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img src={PhotoIcon} alt="" />
+          <img src={AttachIcon} alt="" />
         </label>
 
         <button type="submit" onClick={handleSend}>

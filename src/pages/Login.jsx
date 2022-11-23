@@ -27,7 +27,7 @@ const Login = () => {
     <div className="formContainer">
       <div className="formWrapper">
         <span className="logo">Web Chat</span>
-        <span className="title">Register</span>
+        <span className="title">Login</span>
 
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="email" />
